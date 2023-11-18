@@ -1,38 +1,249 @@
+/* body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #007bff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tabs {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tabs button.active, .tabs button:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.toggle-switch {
+  margin: 10px 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.toggle-switch input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle-switch label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.toggle-switch label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked + label {
+  background: #bada55;
+}
+
+.toggle-switch input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #007bff;
   color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .tabs {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  input, button {
+    width: 100%;
+  }
+} */
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  max-width: 800px; /* Increased width */
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+h1 {
+  color: #007bff;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #333; /* Changed text color for readability */
+}
+
+.tabs button.active, .tabs button:hover {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.toggle-switch {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-switch input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.toggle-switch label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+.toggle-switch label:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.toggle-switch input:checked + label {
+  background: #bada55;
+}
+
+.toggle-switch input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+input, button {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 80%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 800px) {
+  .tabs {
+    flex-direction: column;
+  }
+
+  input, button {
+    width: 100%;
   }
 }
